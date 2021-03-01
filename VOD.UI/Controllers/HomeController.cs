@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using VOD.UI.Models;
 using Microsoft.AspNetCore.Identity;
 using VOD.Common.Entities;
-using VOD.UI.Models;
+//using VOD.UI.Models;
 
 namespace VOD.UI.Controllers
 {
