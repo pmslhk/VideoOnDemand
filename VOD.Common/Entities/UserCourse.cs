@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VOD.Common.Entities
 {
-    class UserCourse
+    public class UserCourse
     {
         public string UserId { get; set; }
         public VODUser User { get; set; }

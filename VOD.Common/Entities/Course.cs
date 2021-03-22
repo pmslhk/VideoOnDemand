@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VOD.Common.Entities
 {
-    class Course
+    public  class Course
     {
         [Key]
         public int Id { get; set; }
