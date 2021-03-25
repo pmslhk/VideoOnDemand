@@ -195,7 +195,7 @@ namespace VOD.Database.Migrations
             }
 
 
-            16
+            //16
             if (!context.Downloads.Any())
             {
                 int courseId1 = 0;
