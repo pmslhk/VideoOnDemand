@@ -22,8 +22,8 @@ namespace VOD.Database.Contexts
         public DbSet<Video> Videos { get; set; }
 
 
-        public VODContext(DbContextOptions<VODContext> options)
- : base(options) { }
+        public VODContext(DbContextOptions<VODContext> options) : base(options)
+        { }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -40,34 +40,6 @@ namespace VOD.Database.Contexts
 
 
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, VODContext db)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseCookiePolicy();
-            // Uncomment to recreate the database. ALL DATA WILL BE LOST !
-            //DbInitializer.RecreateDatabase(db);
-            //Uncomment to seed the database
-            DbInitializer.Initialize(db);
-            app.UseAuthentication();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                name: "default",
-                template: "{controller=Home}/{action=Index}/{id?}");
-            });
-
-        }
     }
 }
 

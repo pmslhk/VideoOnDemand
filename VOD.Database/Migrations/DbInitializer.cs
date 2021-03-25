@@ -8,9 +8,7 @@ using VOD.Common.Entities;
 namespace VOD.Database.Migrations
 {
    public class DbInitializer
-    {
-
-        
+    {   
 
         public static void RecreateDatabase(VODContext context)
         {
@@ -38,12 +36,13 @@ namespace VOD.Database.Migrations
                         {
                             new Instructor {
                               Name = "John Doe",
-                              Description = description.Substring(20, 50),
+                              Description = "desc-test",//description.Substring(20, 50),
                               Thumbnail = "/images/Ice-Age-Scrat-icon.png"
                                             },
                             new Instructor {
                               Name = "Jane Doe",
-                              Description = description.Substring(30, 40),
+                              Description = "desc-test", 
+                               //description.Substring(30, 40),
                               Thumbnail = "/images/Ice-Age-Scrat-icon.png"
                                            }
                         };
@@ -157,35 +156,36 @@ namespace VOD.Database.Migrations
             if (!context.Videos.Any())
             {
                 int courseId1 = 0;
+                int courseId2 = 0;
                 var videos = new List<Video>
                  {
                    new Video { ModuleId = moduleId1, CourseId = courseId1,
                                Title = "Video 1 Title",
-                               Description = description.Substring(1, 35),
+                               Description = "Video 1 Desc", //description.Substring(1, 35),
                                Duration = 50, Thumbnail = "/images/video1.jpg",
                                Url = "https://www.youtube.com/watch?v=BJFyzpBcaCY"
                              },
                    new Video { ModuleId = moduleId1, CourseId = courseId1,
                                Title = "Video 2 Title",
-                               Description = description.Substring(5, 35),
+                               Description = "Video 2 Desc",  //description.Substring(5, 35),
                                Duration = 45, Thumbnail = "/images/video2.jpg",
                                Url = "https://www.youtube.com/watch?v=BJFyzpBcaCY"
                              },
                    new Video { ModuleId = moduleId1, CourseId = courseId1,
                                Title = "Video 3 Title",
-                               Description = description.Substring(10, 35),
+                               Description = "Video 3 Desc",  //description.Substring(10, 35),
                                Duration = 41, Thumbnail = "/images/video3.jpg",
                                Url = "https://www.youtube.com/watch?v=BJFyzpBcaCY"
                              },
                    new Video { ModuleId = moduleId3, CourseId = courseId2,
                                Title = "Video 4 Title",
-                               Description = description.Substring(15, 35),
+                               Description = "Video 4 Desc",  //description.Substring(15, 35),
                                Duration = 41, Thumbnail = "/images/video4.jpg",
                                Url = "https://www.youtube.com/watch?v=BJFyzpBcaCY"
                              },
                    new Video { ModuleId = moduleId2, CourseId = courseId1,
                                Title = "Video 5 Title",
-                               Description = description.Substring(20, 35),
+                               Description = "Video 5 Desc",  //description.Substring(20, 35),
                                Duration = 42, Thumbnail = "/images/video5.jpg",
                                Url = "https://www.youtube.com/watch?v=BJFyzpBcaCY"
                              }
@@ -195,7 +195,7 @@ namespace VOD.Database.Migrations
             }
 
 
-            //16
+            16
             if (!context.Downloads.Any())
             {
                 int courseId1 = 0;
@@ -214,7 +214,7 @@ namespace VOD.Database.Migrations
             }
 
 
-            DbInitializer.Initialize(db);
+
         }
 
 

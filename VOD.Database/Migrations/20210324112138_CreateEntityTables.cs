@@ -2,7 +2,7 @@
 
 namespace VOD.Database.Migrations
 {
-    public partial class CreateEntityTables1 : Migration
+    public partial class CreateEntityTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
