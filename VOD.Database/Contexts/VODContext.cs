@@ -21,9 +21,11 @@ namespace VOD.Database.Contexts
         public DbSet<UserCourse> UserCourses { get; set; }
         public DbSet<Video> Videos { get; set; }
 
-
+       
         public VODContext(DbContextOptions<VODContext> options) : base(options)
-        { }
+        { 
+        
+        }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using VOD.UI.Models;
 using Microsoft.AspNetCore.Identity;
 using VOD.Common.Entities;
-//using VOD.UI.Models;
+using VOD.Database.Services;
 
 namespace VOD.UI.Controllers
 {
@@ -15,16 +15,20 @@ namespace VOD.UI.Controllers
     {
         private SignInManager<VODUser> _signInManager;
 
-        public HomeController(SignInManager<VODUser> _signInMgr)
+        private IDbReadService _db;
+        public  HomeController(SignInManager<VODUser> signInMgr,
+        IDbReadService db)
         {
-            _signInManager = _signInMgr;
+            _signInManager = signInMgr;
+            _db = db;
         }
+
 
         public IActionResult Index()
         {
             if (!_signInManager.IsSignedIn(User)) return RedirectToPage("/Account/Login", new { Area = "Identity" });
-
-            return View();
+            
+            return  View();
         }
 
         public IActionResult Privacy()
