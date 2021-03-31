@@ -31,8 +31,10 @@ namespace VOD.Database.Services
 
         public async Task<List<TEntity>> GetAsync<TEntity>() where TEntity : class
         {
-            
-            throw new NotImplementedException();
+
+            return await _db.Set<TEntity>().ToListAsync();
+
+            //throw new NotImplementedException();
         }
 
         public void Include<TEntity>() where TEntity : class

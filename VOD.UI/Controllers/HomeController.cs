@@ -21,14 +21,20 @@ namespace VOD.UI.Controllers
         {
             _signInManager = signInMgr;
             _db = db;
+
+           
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult>   Index()
         {
+
+            var result1 = await _db.SingleAsync<Download>(d => d.Id.Equals(3));
+
             if (!_signInManager.IsSignedIn(User)) return RedirectToPage("/Account/Login", new { Area = "Identity" });
+
             
-            return  View();
+            return View();
         }
 
         public IActionResult Privacy()
