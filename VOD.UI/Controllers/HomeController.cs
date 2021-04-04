@@ -25,7 +25,7 @@ namespace VOD.UI.Controllers
 
 
         //9장
-        private IDbReadService _db;
+        //private IDbReadService _db;
         //public HomeController(SignInManager<VODUser> signInMgr, IDbReadService db)
         //{
         //    _signInManager = signInMgr;
