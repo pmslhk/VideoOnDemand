@@ -34,8 +34,7 @@ namespace VOD.Database.Services
 
             return await _db.Set<TEntity>().ToListAsync();
 
-            //throw new NotImplementedException();
-        }
+                    }
 
         public void Include<TEntity>() where TEntity : class
         {
@@ -46,7 +45,7 @@ namespace VOD.Database.Services
             foreach (var name in propertyNames)
                 _db.Set<TEntity>().Include(name).Load();
 
-            //throw new NotImplementedException();
+            
         }
 
         public void Include<TEntity1, TEntity2>()
@@ -56,7 +55,7 @@ namespace VOD.Database.Services
             Include<TEntity1>();
             Include<TEntity2>();
 
-            //throw new NotImplementedException();
+            
         }
 
         public async Task<TEntity> SingleAsync<TEntity>(Expression<Func<TEntity, bool>> expression) where TEntity : class
@@ -64,7 +63,7 @@ namespace VOD.Database.Services
             return await _db.Set<TEntity>().Where(expression)
  .SingleOrDefaultAsync();
 
-            //throw new NotImplementedException();
+           
         }
 
 

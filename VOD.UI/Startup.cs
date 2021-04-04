@@ -48,8 +48,8 @@ namespace VOD.UI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddScoped<IDbReadService, DbReadService>();
+            services.AddScoped<IUIReadService, UIReadService>();
 
-            
 
         }
 

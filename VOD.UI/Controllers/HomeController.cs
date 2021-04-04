@@ -15,24 +15,35 @@ namespace VOD.UI.Controllers
     {
         private SignInManager<VODUser> _signInManager;
 
-        private IDbReadService _db;
-        public  HomeController(SignInManager<VODUser> signInMgr,
-        IDbReadService db)
+        //10장
+        private readonly IUIReadService _db;
+        public HomeController(SignInManager<VODUser> signInMgr, IUIReadService db)
         {
             _signInManager = signInMgr;
             _db = db;
-
-           
         }
 
 
-        public async Task<IActionResult>   Index()
-        {
+        //9장
+        private IDbReadService _db;
+        //public HomeController(SignInManager<VODUser> signInMgr, IDbReadService db)
+        //{
+        //    _signInManager = signInMgr;
+        //    _db = db;
 
-            var result1 = await _db.SingleAsync<Download>(d => d.Id.Equals(3));
+        //}
+
+        //9장
+        public IActionResult Index()
+        //public async Task<IActionResult> Index()
+        {
+            //9장
+            //var result1 = await _db.SingleAsync<Download>(d => d.Id.Equals(3));
+            //var course = _db.GetCourse("d0200875-0f47-4975-a0fb-4d8df954ec79", 1);
+            //var video = await _db.GetVideo("d0200875-0f47-4975-a0fb-4d8df954ec79", 1);
+
 
             if (!_signInManager.IsSignedIn(User)) return RedirectToPage("/Account/Login", new { Area = "Identity" });
-
             
             return View();
         }
