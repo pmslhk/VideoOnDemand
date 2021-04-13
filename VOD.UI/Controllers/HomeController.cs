@@ -24,6 +24,8 @@ namespace VOD.UI.Controllers
         }
 
 
+
+
         //9장
         //private IDbReadService _db;
         //public HomeController(SignInManager<VODUser> signInMgr, IDbReadService db)
@@ -34,12 +36,16 @@ namespace VOD.UI.Controllers
         //}
 
         //9장
-        public IActionResult Index()
-        //public async Task<IActionResult> Index()
+       // public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             //9장
             //var result1 = await _db.SingleAsync<Download>(d => d.Id.Equals(3));
-            //var course = _db.GetCourse("d0200875-0f47-4975-a0fb-4d8df954ec79", 1);
+            //var courses = await _db.GetCourses("dea61c61-773c-43e3-887d-7464e8cc2929");
+
+            var course = await _db.GetCourse("dea61c61-773c-43e3-887d-7464e8cc2929", 1);
+
+
             //var video = await _db.GetVideo("d0200875-0f47-4975-a0fb-4d8df954ec79", 1);
 
 
