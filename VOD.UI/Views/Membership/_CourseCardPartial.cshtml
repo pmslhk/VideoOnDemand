@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using VOD.Common.DTOModels.UI
+@model CourseDTO
+@{
+}
+
+
+<div class="col-sm-4">
+    <div class="card no-border-radius">
+
+        <div class="card no-border-radius">
+
+            <div class="card-body">
+
+                <h3 class="card-title">@Model.CourseTitle</h3>
+                <p class="card-text">@Model.CourseDescription</p>
+                <a class="btn btn-primary no-border-radius"
+                   href="~/Membership/Course/@Model.CourseId">View Course</a>
+            </div>
+        </div>
+    </div>
+</div>

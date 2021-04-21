@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!--@{
+}-->
+
+
+@model DashboardViewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<h1>Dashboard</h1>
+<hr>
+@foreach (var dashboardRow in Model.Courses)
+{
+<div class="row">
+    @foreach (var course in dashboardRow)
+    {
+
+        @*<h4>@course.CourseTitle</h4>*@
+
+        <partial name="_CourseCardPartial" model="@course" />
+        @*@await Html.PartialAsync("_CourseCardPartial", course)*@
+      
+    }
+</div>
+}
+
