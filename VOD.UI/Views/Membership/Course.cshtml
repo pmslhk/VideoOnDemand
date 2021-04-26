@@ -1,0 +1,72 @@
+﻿@model CourseViewModel
+@{
+
+    ViewData["Title"] = "Course";
+}
+
+@*<h1>Course</h1>*@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card no-border-radius">
+            <div class="marquee" style="background-image:url(
+                   '@Model.Course.MarqueeImageUrl');">
+                <img src="@Model.Course.CourseImageUrl">
+            </div>
+            <div class="card-body">
+                <h1 class="card-title">@Model.Course.CourseTitle</h1>
+                <h4 class="card-text">
+                    @Model.Course.CourseDescription
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-9">
+        @*Add modules here*@
+
+        @foreach (var module in Model.Modules)
+        {
+            <div class="card small-top-margin no-border-radius">
+                <div class="card-body">
+                    <h5>@module.ModuleTitle</h5>
+                </div>
+                <hr class="no-margin">
+
+                @*20210426*@
+                @if (module.Videos != null && module.Videos.Count > 0)
+                {
+                    <partial name="_ModuleVideosPartial" model="@module.Videos" />
+                }
+
+
+                @if (module.Downloads != null && module.Downloads.Count > 0)
+                {
+                    <hr class="no-margin">
+                    <div class="card-body no-bottom-padding">
+                        <h5>Downloads</h5>
+                    </div>
+
+                    <div class="card-body no-top-padding">
+                        <partial name="_ModuleDownloadsPartial" model="@module.Downloads" />
+                    </div>
+                }
+
+            </div>
+        }
+    </div>
+
+
+    <div class="col-sm-3">@*Add instructor bio here*@</div>
+
+    @if (Model.Instructor != null)
+    {
+        <partial name="_InstructorBioPartial"
+                 model="@Model.Instructor" />
+    }
+
+</div>
+
+

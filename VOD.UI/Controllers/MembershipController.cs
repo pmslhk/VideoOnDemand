@@ -10,7 +10,9 @@ using VOD.Common.DTOModels.UI;
 using VOD.Common.Entities;
 using VOD.Database.Services;
 using VOD.UI.Models;
-using VOD.UI.Models.MembershipViewModels;
+
+//20210426
+//using VOD.UI.Models.MembershipViewModels;
 
 namespace VOD.UI.Controllers
 {
@@ -56,7 +58,7 @@ namespace VOD.UI.Controllers
             var mappedCourseDTO = _mapper.Map<CourseDTO>(course);
             var mappedInstructorDTO = _mapper.Map<InstructorDTO>(course.Instructor);
             var mappedModuleDTOs = _mapper.Map<List<ModuleDTO>>(course.Modules);
-
+            
             var courseModel = new CourseViewModel
             {
                 Course = mappedCourseDTO,
@@ -101,7 +103,13 @@ namespace VOD.UI.Controllers
                     NextVideoId = nextId,
                     PreviousVideoId = previousId,
                     NextVideoTitle = nextTitle,
-                    NextVideoThumbnail = nextThumb
+                    NextVideoThumbnail = nextThumb,
+
+                    //14장
+                    CurrentVideoTitle = video.Title,
+                    CurrentVideoThumbnail = video.Thumbnail
+
+
                 }
 
             };

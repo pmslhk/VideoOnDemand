@@ -1,0 +1,37 @@
+﻿@model VideoViewModel
+
+@{
+    ViewData["Title"] = "Video";
+}
+
+
+<div class="row small-bottom-margin">
+    <div class="col-sm-12">
+        <a class="btn btn-primary no-border-radius no-left-padding"
+           asp-action="Dashboard">
+            <i class="material-icons vertical-align no-left-margin">
+                keyboard_arrow_left
+            </i>
+            <span class="vertical-align">Back to Dashboard</span>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-9">
+        @*Place the video player here*@
+
+        @if (Model != null && Model.Video != null && Model.LessonInfo != null && Model.Course != null)
+        {
+            <partial name="_VideoPlayerPartial" model="@Model" />
+        }
+
+    </div>
+    <div class="col-sm-3">
+        @*Place the Coming Up and Instructor Bio sections here*@
+    </div>
+</div>
+
+
+
+

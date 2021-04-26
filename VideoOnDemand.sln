@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VOD.UI", "VOD.UI\VOD.UI.csproj", "{D425F512-A231-4525-972E-302631E8C84A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VOD.UI", "VOD.UI\VOD.UI.csproj", "{D425F512-A231-4525-972E-302631E8C84A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VOD.Common", "VOD.Common\VOD.Common.csproj", "{D9E82CC5-27FC-40BC-8773-FA78AA77B9D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VOD.Common", "VOD.Common\VOD.Common.csproj", "{D9E82CC5-27FC-40BC-8773-FA78AA77B9D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VOD.Database", "VOD.Database\VOD.Database.csproj", "{27DEAAA1-CDE7-4862-A28A-011AF7AB6ECB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VOD.Database", "VOD.Database\VOD.Database.csproj", "{27DEAAA1-CDE7-4862-A28A-011AF7AB6ECB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -13,5 +13,11 @@ namespace VOD.Common.DTOModels.UI
         public string NextVideoTitle { get; set; }
         public string NextVideoThumbnail { get; set; }
 
+        //14장
+        public string CurrentVideoTitle { get; set; }
+        public string CurrentVideoThumbnail { get; set; }
+
+
+
     }
 }
