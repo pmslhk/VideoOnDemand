@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VOD.Common", "VOD.Common\VO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VOD.Database", "VOD.Database\VOD.Database.csproj", "{27DEAAA1-CDE7-4862-A28A-011AF7AB6ECB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VOD.Admin", "VOD.Admin\VOD.Admin.csproj", "{414380AB-4146-4483-9D0E-42809A028C43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{27DEAAA1-CDE7-4862-A28A-011AF7AB6ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27DEAAA1-CDE7-4862-A28A-011AF7AB6ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27DEAAA1-CDE7-4862-A28A-011AF7AB6ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414380AB-4146-4483-9D0E-42809A028C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414380AB-4146-4483-9D0E-42809A028C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414380AB-4146-4483-9D0E-42809A028C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414380AB-4146-4483-9D0E-42809A028C43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
