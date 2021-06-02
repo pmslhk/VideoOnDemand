@@ -12,7 +12,20 @@ namespace VOD.Database.Services
     public class DbReadService : IDbReadService
     {
         private VODContext _db;
-        public DbReadService(VODContext db)
+
+
+        public (int courses, int downloads, int instructors, int modules, int videos, int users) Count()
+        {
+            return (
+                courses: _db.Courses.Count(),
+                downloads: _db.Downloads.Count(),
+                instructors: _db.Instructors.Count(),
+                modules: _db.Modules.Count(),
+                videos: _db.Videos.Count(),
+                users: _db.Users.Count());
+
+        }
+            public DbReadService(VODContext db)
         {
             _db = db;
         }

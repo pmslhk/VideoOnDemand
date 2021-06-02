@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace VOD.Admin.Models
+{
+    public class CardViewModel
+    {
+        public string BackgroundColor { get; set; }
+        public int Count { get; set; }
+        public string Description { get; set; }
+        public string Icon { get; set; }
+        public string Url { get; set; }
+        
+    }
+}
