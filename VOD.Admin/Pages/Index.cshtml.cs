@@ -21,7 +21,7 @@ namespace VOD.Admin.Pages
         }
         public void OnGet()
         {
-            var (instructors, users, courses, modules, videos, downloads) =
+            var (courses, downloads,  instructors, modules, videos, users) =
             _db.Count();
 
             Cards = (
