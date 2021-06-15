@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace VOD.Admin.TagHelpers
 {
+
     [HtmlTargetElement("btn")]
-    public class PageButtonTagHelper : AnchorTagHelper
+    public class BtnTagHelper : AnchorTagHelper
     {
         #region Properties
         public string Icon { get; set; } = string.Empty;
@@ -30,7 +31,7 @@ namespace VOD.Admin.TagHelpers
         #region This constructor is needed for AnchorTagHelper inheritance
 
 
-        public PageButtonTagHelper(IHtmlGenerator generator) : base(generator)
+        public BtnTagHelper(IHtmlGenerator generator) : base(generator)
         {
         }
         #endregion
@@ -43,6 +44,8 @@ namespace VOD.Admin.TagHelpers
                 throw new ArgumentNullException(nameof(output));
             // Change <btn> tag to <a> tag
             output.TagName = "a";
+
+            
             #region Bootstrap Button
             // Fetch page and class attribute to see if they exist
             var aspPageAttribute = context.AllAttributes.SingleOrDefault(
@@ -87,15 +90,19 @@ namespace VOD.Admin.TagHelpers
                 var childContext = output.GetChildContentAsync().Result;
                 var content = childContext.GetContent().Trim();
                 if (content.Length > 0) content = $"&nbsp{content}";
-                output.Content.SetHtmlContent($"<i class='{iconProvider}' style = 'display: inline-flex; vertical-align: top; line - height: inherit; font - size: medium; '>{Icon}</i> < span style = 'font-size: medium;' >{ content}</ span > ");
-           }
+                output.Content.SetHtmlContent($"<i class='{iconProvider}' style = 'display: inline-flex; vertical-align: top; line-height: inherit; font-size: medium; '>{Icon}</i> < span style = 'font-size: medium;' >{ content}</ span > ");
+           
+
+
+            }
             #endregion
+
 
             // Fetch style attribute if it exists
             var style = context.AllAttributes.SingleOrDefault(s =>
             s.Name.ToLower().Equals("style"));
             var styleValue = style == null ? "" : style.Value;
-            var newStyle = new TagHelperAttribute("style", $"{styleValue}  display: inline - flex; border - radius:0px; text - decoration: none; ");
+            var newStyle = new TagHelperAttribute("style", $"{styleValue}  display: inline-flex; border-radius:0px; text-decoration: none; ");
  
             if (style != null) output.Attributes.Remove(style);
                output.Attributes.Add(newStyle);
