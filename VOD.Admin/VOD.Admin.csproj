@@ -6,6 +6,10 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Pages\Users\Index.cshtml" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
@@ -30,6 +34,21 @@
   <ItemGroup>
     <ProjectReference Include="..\VOD.Common\VOD.Common.csproj" />
     <ProjectReference Include="..\VOD.Database\VOD.Database.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Users\Index.cshtml" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Users\Index.cshtml" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="Pages\Users\Index.cshtml" />
   </ItemGroup>
 
 </Project>
