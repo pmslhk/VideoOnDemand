@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VOD.Common.Entities;
+using VOD.Common.Services;
 using VOD.Database.Contexts;
 using VOD.Database.Services;
 
@@ -51,7 +53,9 @@ namespace VOD.Admin
 
             services.AddScoped<IDbWriteService, DbWriteService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAdminService, AdminEFService>();
 
+            services.AddAutoMapper(typeof(Startup), typeof(Instructor),typeof(Course), typeof(Module), typeof(Video), typeof(Download)); // Version 6.1.0
 
         }
 
