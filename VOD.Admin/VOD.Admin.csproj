@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Downloads\Index.cshtml" />
+    <Content Remove="Pages\Videos\Index.cshtml" />
+    <Content Remove="Pages\Modules\Index.cshtml" />
+    <Content Remove="Pages\Courses\Index.cshtml" />
+    <Content Remove="Pages\Instructors\Index.cshtml" />
     <Content Remove="Pages\Users\Index.cshtml" />
   </ItemGroup>
 
@@ -48,6 +53,11 @@
 
 
   <ItemGroup>
+    <None Include="Pages\Downloads\Index.cshtml" />
+    <None Include="Pages\Videos\Index.cshtml" />
+    <None Include="Pages\Modules\Index.cshtml" />
+    <None Include="Pages\Courses\Index.cshtml" />
+    <None Include="Pages\Instructors\Index.cshtml" />
     <None Include="Pages\Users\Index.cshtml" />
   </ItemGroup>
 
