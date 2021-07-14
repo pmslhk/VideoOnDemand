@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using VOD.Common.DTOModels.Admin;
 using VOD.Common.Services;
-using VOD.Database.Services;
+//using VOD.Database.Services;
 
 
 namespace VOD.Admin.Pages.Modules
@@ -17,9 +17,8 @@ namespace VOD.Admin.Pages.Modules
     public class IndexModel : PageModel
     {
         #region Properties
-        private readonly IUserService _userService;
+        
         public IEnumerable<ModuleDTO> Items = new List<ModuleDTO>();
-
 
         [TempData] 
         public string Alert { get; set; }
