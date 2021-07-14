@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using VOD.Common.DTOModels;
+using VOD.Common.DTOModels.Admin;
+using VOD.Common.Entities;
+using VOD.Common.Services;
 using VOD.Database.Services;
 
 
@@ -40,11 +43,11 @@ namespace VOD.Admin.Pages.Courses
             if (ModelState.IsValid)
             {
                 var succeeded = (await _db.CreateAsync<CourseDTO,
-                Courses>(Input)) > 0;
+                Course>(Input)) > 0;
                 if (succeeded)
                 {
                     // Message sent back to the Index Razor Page.
-                    Alert = $"Created a new Instructor: {Input.Name}.";
+                    Alert = $"Created a new Instructor: {Input.Description}.";
                     return RedirectToPage("Index");
                 }
             }

@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using VOD.Common.DTOModels.Admin;
+using VOD.Common.Services;
 using VOD.Database.Services;
 
 
@@ -37,7 +39,7 @@ namespace VOD.Admin.Pages.Modules
         {
             try
             {
-                Items = await _db.GetAsync<Modules, ModuleDTO>(true);
+                Items = await _db.GetAsync<Module, ModuleDTO>(true);
                 return Page();
             }
             catch

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using VOD.Common.DTOModels.Admin;
+using VOD.Common.Entities;
+using VOD.Common.Services;
 using VOD.Database.Services;
 
 
@@ -36,7 +38,7 @@ namespace VOD.Admin.Pages.Videos
         {
             try
             {
-                Items = await _db.GetAsync<Videos, VideoDTO>(true);
+                Items = await _db.GetAsync<Video, VideoDTO>(true);
                 return Page();
             }
             catch

@@ -7,15 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using VOD.Common.DTOModels;
 using VOD.Common.DTOModels.Admin;
+using VOD.Common.Entities;
+using VOD.Common.Services;
 using VOD.Database.Services;
 
 namespace VOD.Admin.Pages.Modules
 
 {
     [Authorize(Roles = "Admin")]
-    public class DeleteModel : PageModel
-    {
-        [Authorize(Roles = "Admin")]
         public class DeleteModel : PageModel
         {
             #region Properties
@@ -69,5 +68,5 @@ namespace VOD.Admin.Pages.Modules
             }
             #endregion
         }
-    }
+    
 }
