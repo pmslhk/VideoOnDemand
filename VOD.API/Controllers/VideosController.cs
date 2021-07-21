@@ -11,7 +11,7 @@ using VOD.Common.Services;
 
 namespace VOD.API.Controllers
 {
-    [Authorize(Policy = "Admin")]
+    //[Authorize(Policy = "Admin")]
     [Route("api/courses/{courseId}/modules/{moduleId}/videos")]
     [ApiController]
     public class VideosController : ControllerBase

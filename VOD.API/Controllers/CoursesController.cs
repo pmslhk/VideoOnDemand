@@ -12,7 +12,7 @@ using VOD.Common.Services;
 
 namespace VOD.API.Controllers
 {
-    [Authorize(Policy = "Admin")]
+    //[Authorize(Policy = "Admin")]
     [Route("api/courses")]
     [ApiController]
     public class CoursesController : ControllerBase
